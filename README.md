@@ -12,7 +12,7 @@ I'm Seniru - a hobbyist coder and a cat lover :3
 <img src="https://cdn.discordapp.com/emojis/403294977154875412.png?v=1" width="40" alt="Java" align="left">
 
 
-I love to learn and explore new stuff - especially when it comes to programming. So do share if you have interesting stuff with me :smile: ! Do not forget to share some cat pictures with me too :P
+I love to learn and explore new stuff - especially when it comes to programming. So do share if you have interesting stuff with me :smile: ! Do not forget to share some cat pictures too :P
 
 
 <hr>
