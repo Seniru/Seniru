@@ -2,6 +2,7 @@
 
 > I can make 'em beep! beep!! :computer:
 
+
 I'm Seniru - a hobbyist coder and a cat lover :3
 
 ## My Languages
@@ -17,6 +18,8 @@ I love to learn and explore new stuff - especially when it comes to programming.
 
 <hr>
 
+<img src="https://github-profile-trophy.vercel.app/?username=Seniru&theme=onedark">
+
 **Contact me**
 
-[:e-mail: senirupasan@gmail.com](senirupasan@gmail.com) | ![Discord](https://icons.iconarchive.com/icons/papirus-team/papirus-apps/16/discord-icon.png) Seniru`#3892`
+[:e-mail: senirupasan@gmail.com](senirupasan@gmail.com) | ![Discord](https://icons.iconarchive.com/icons/papirus-team/papirus-apps/16/discord-icon.png) Seniru`#0095`
