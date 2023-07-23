@@ -22,4 +22,4 @@ I love to learn and explore new stuff - especially when it comes to programming.
 
 **Contact me**
 
-[:e-mail: senirupasan@gmail.com](senirupasan@gmail.com) | ![Discord](https://icons.iconarchive.com/icons/papirus-team/papirus-apps/16/discord-icon.png) Seniru`#9937`
+[:e-mail: senirupasan@gmail.com](senirupasan@gmail.com) | ![Discord](https://icons.iconarchive.com/icons/papirus-team/papirus-apps/16/discord-icon.png) @seniru
