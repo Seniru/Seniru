@@ -1,0 +1,52 @@
+/* 
+	Common component styles
+*/
+
+@import "../app.scss";
+
+h1, h2, h3, h4, h5, h6 {
+	color: $text-color-secondary
+}
+
+/* links */
+a:link, a:visited, a:active, a:hover {
+	color: white;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:active {
+	text-decoration: underline;
+	color: $tertiary-color;
+}
+
+/* button */
+button, input[type=submit] {
+	background-color: $primary-color;
+    color: $text-color-primary;
+	border: none;
+    padding: 8px;
+    font-weight: bold;
+    border-radius: 5px;
+	cursor: pointer;
+}
+
+button:hover, input[type=submit]:hover {
+	color: rgba($text-color-primary, 0.8);
+}
+
+button:active, input[type=submit]:active {
+	background-color: rgba($primary-color, 0.8);
+	color: rgba($text-color-primary, 0.6);
+}
+
+/* input */
+input {
+	border: none;
+    padding: 6px;
+    outline: 0;
+    border-radius: 3px;
+}
