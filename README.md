@@ -2,10 +2,10 @@
 
 > I can make 'em beep! beep!! :computer:
 
-
 I'm Seniru - a hobbyist coder and a cat lover :3
 
 ## My Languages
+
 <table>
   <tr>
     <td>
@@ -21,9 +21,6 @@ I'm Seniru - a hobbyist coder and a cat lover :3
     </td>
   </tr>
 </table>
-
-
-
 
 <hr>
 

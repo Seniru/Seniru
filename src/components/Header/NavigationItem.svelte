@@ -10,14 +10,16 @@
 </li>
 
 <style lang="scss">
-	@import "../../app.scss";
+	@use '../../utils/variables.scss' as v;
 
 	li {
-		
 		display: inline;
 		margin-right: 10px;
-		
-		a:link, a:visited, a:active, a:hover {
+
+		a:link,
+		a:visited,
+		a:active,
+		a:hover {
 			color: white;
 			text-decoration: none;
 			font-weight: bold;
@@ -29,7 +31,7 @@
 
 		a:active {
 			text-decoration: underline;
-			color: $tertiary-color;
+			color: v.$tertiary-color;
 		}
 	}
 </style>

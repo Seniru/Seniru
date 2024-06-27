@@ -1,5 +1,5 @@
 <script>
-	import NavigationItem from "./NavigationItem.svelte"
+	import NavigationItem from './NavigationItem.svelte'
 </script>
 
 <nav>
@@ -10,7 +10,6 @@
 
 <style lang="scss">
 	nav {
-
 		display: inline;
 		vertical-align: middle;
 		position: absolute;
