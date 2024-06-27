@@ -1,7 +1,3 @@
-<script>
-	import NavigationItem from './NavigationItem.svelte'
-</script>
-
 <nav>
 	<ul>
 		<slot />

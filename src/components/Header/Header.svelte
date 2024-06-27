@@ -15,10 +15,9 @@
 </header>
 
 <style lang="scss">
-	@import '../../app.scss';
-
 	header {
 		position: sticky;
+		margin-bottom: 35px;
 	}
 
 	.logo {

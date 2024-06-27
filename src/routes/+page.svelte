@@ -3,7 +3,7 @@
 	import logo2 from '../assets/logo2.svg'
 </script>
 
-<section id="welcome">
+<section id="welcome" class="container">
 	<h1>Hi there, I'm <span class="name">Seniru</span></h1>
 	<hr />
 	<p>
@@ -57,10 +57,6 @@
 	@use '../utils/variables' as v;
 
 	#welcome {
-		margin-top: 35px;
-		background-color: v.$primary-color;
-		padding: 25px;
-
 		#about {
 			position: relative;
 
@@ -82,9 +78,5 @@
 
 	.name {
 		color: v.$tertiary-color;
-	}
-
-	.important {
-		color: v.$text-color-secondary;
 	}
 </style>

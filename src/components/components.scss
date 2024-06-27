@@ -18,7 +18,7 @@ a:link,
 a:visited,
 a:active,
 a:hover {
-	color: white;
+	color: v.$text-color-secondary;
 	text-decoration: none;
 }
 
@@ -65,4 +65,9 @@ input {
 /* container */
 .container {
 	background-color: v.$primary-color;
+	padding: 25px;
+}
+
+.important {
+	color: v.$text-color-secondary;
 }
