@@ -1,0 +1,43 @@
+[
+	{
+		"name": "at.py",
+		"tags": ["python"],
+		"link": "https://github.com/Seniru/at.py",
+		"description": "An asynchronous and event-based AT terminal implementation using asyncio and serial."
+	},
+	{
+		"name": "Calculator",
+		"tags": ["web", "javascript"],
+		"image": "https://github.com/Seniru/Calculator/assets/34127015/6a7df1db-31f9-470f-976c-5e180d2dab4c",
+		"link": "https://github.com/Seniru/Calculator",
+		"description": "A fancy calculator with lots of awesome features. Supports lots of mathematical functions and allows editing expressions without errors."
+	},
+	{
+		"name": "pewpew",
+		"tags": ["lua", "transformice"],
+		"image": "https://static.wikia.nocookie.net/transformice/images/6/6a/Pewpew_map.png",
+		"link": "https://github.com/Seniru/pewpew",
+		"description": "#Pewpew is an official Transformice module originally created by Baasbase#0095 and maintained by King_seniru#5890 (since 09/09/2020) where you shoot random objects at each other to win."
+	},
+	{
+		"name": "wtal-bot",
+		"tags": ["python", "lua", "transformice", "docker"],
+		"image": "http://logostribu.atelier801.com/7510/1187510.jpg?1719460820705",
+		"link": "https://github.com/Seniru/wtal-bot",
+		"description": "Discord and Transformice bot for the tribe We talk a Lot."
+	},
+	{
+		"name": "flowcharts",
+		"tags": ["web"],
+		"image": "https://github.com/Seniru/flowcharts/assets/34127015/5984fcd7-1fb3-432d-9edc-24a319466e08",
+		"link": "https://github.com/Seniru/flowcharts",
+		"description": "Create, run and debug flowcharts!"
+	},
+	{
+		"name": "Nobles' Quest 2022",
+		"tags": ["lua", "transformice"],
+		"image": "https://github.com/Seniru/evt_nobles_quest/assets/34127015/6b7248bb-e35b-4466-98e4-7747faf0298a",
+		"link": "https://github.com/Seniru/evt_nobles_quest",
+		"description": "Nobles' Quest 2022 Transformice event. The princess and the treasury are in danger under the hands of evil forces. Travel back to the ancient medieval times to gather resources, craft items and get stronger, then fight off the monsters!"
+	}
+]

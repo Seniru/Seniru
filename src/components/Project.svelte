@@ -41,10 +41,10 @@
 			position: relative;
 			display: inline-block;
 			vertical-align: top;
-			border-radius: 5px;
 
 			img {
 				width: 100%;
+				border-radius: 15px;
 				height: 250px;
 			}
 		}
