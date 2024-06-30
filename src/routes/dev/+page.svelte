@@ -59,7 +59,6 @@
 		kind="tags"
 		values={Object.fromEntries(allTags.map((tag) => [tag, true]))}
 		on:select={(evt) => {
-			console.log(evt.detail)
 			selectedProjectTags = Object.keys(evt.detail).filter((tag) => evt.detail[tag])
 		}}
 	/>
