@@ -39,5 +39,19 @@
 		"image": "https://github.com/Seniru/evt_nobles_quest/assets/34127015/6b7248bb-e35b-4466-98e4-7747faf0298a",
 		"link": "https://github.com/Seniru/evt_nobles_quest",
 		"description": "Nobles' Quest 2022 Transformice event. The princess and the treasury are in danger under the hands of evil forces. Travel back to the ancient medieval times to gather resources, craft items and get stronger, then fight off the monsters!"
+	},
+	{
+		"name": "Gamehub",
+		"tags": ["web", "javascript"],
+		"image": "gamehub.jpeg",
+		"link": "https://github.com/Seniru/online-gaming-site",
+		"description": "SLIIT university project featuring a online gaming site"
+	},
+	{
+		"name": "Infinity Blue",
+		"tags": ["web", "javascript"],
+		"image": "infinity-blue.jpeg",
+		"link": "https://github.com/Seniru/boat-safari-trip-management",
+		"description": "SLIIT university project featuring a boat safari trip management system"
 	}
 ]
