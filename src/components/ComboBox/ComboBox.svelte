@@ -65,7 +65,7 @@
 	.options {
 		position: absolute;
 		padding: 10px 15px;
-		background-color: v.$secondary-color;
+		background-color: #3d3d3d;
 		border: 2px solid v.$background-color;
 		border-radius: 10px;
 	}

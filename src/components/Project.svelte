@@ -27,9 +27,11 @@
 </div>
 
 <style lang="scss">
+
+	@use '../utils/variables.scss' as v;
 	.project {
 		position: relative;
-		background-color: #030637;
+		background-color: v.$background-color;
 		padding: 15px;
 		width: calc(100% - 30px);
 		height: fit-content;
