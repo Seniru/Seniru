@@ -83,19 +83,22 @@
 	#languages {
 		height: 100%;
 		position: relative;
-		div,
-		img {
-			width: 45%;
-			display: inline-block;
-			vertical-align: top;
+		display: grid;
+		
+		@media (min-width: 800px) {
+			display: flex;
+			justify-content: space-between;
 		}
-		div > #language-icons {
-			position: absolute;
-			bottom: 1px;
-			img {
-				width: 50px;
-				height: 50px;
-				margin-left: 10px;
+		div {
+			display: grid;
+			align-content: space-between;
+			#language-icons {
+				display: inline;
+				img {
+					width: 50px;
+					height: 50px;
+					margin-left: 10px;
+				}
 			}
 		}
 	}

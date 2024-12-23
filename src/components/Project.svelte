@@ -13,15 +13,18 @@
 		<img src={image} alt="project" />
 	</div>
 	<div class="project-info">
-		<h3>{name}</h3>
-		<p class="project-description">
-			<slot />
-		</p>
-		<a href={link}>View project</a>
+		<div>
+			<h3>{name}</h3>
+			<p class="project-description">
+				<slot />
+			</p>
+			<a href={link}>View project</a>
+		</div>
 		<div class="tags">
 			{#each tags as tag}
 				<Tag name={tag} />
 			{/each}
+
 		</div>
 	</div>
 </div>
@@ -30,38 +33,51 @@
 
 	@use '../utils/variables.scss' as v;
 	.project {
-		position: relative;
 		background-color: v.$background-color;
 		padding: 15px;
 		width: calc(100% - 30px);
 		height: fit-content;
 		margin-bottom: 10px;
+		display: grid;
+
+		@media (min-width: 800px) {
+			display: flex;
+		}
 
 		.image-container {
-			width: 30%;
-			height: 100%;
-			position: relative;
-			display: inline-block;
-			vertical-align: top;
+			width: 100%;
+			margin-bottom: 0;
+
+			@media (min-width: 800px) {
+				width: 30%
+			}
 
 			img {
 				width: 100%;
+				height: 80%;
 				border-radius: 15px;
-				height: 250px;
 			}
+
+
+
+			margin-right: 10px;
 		}
 
 		.project-info {
-			width: 60%;
-			height: 100%;
-			margin-left: 15px;
-			display: inline-block;
-			vertical-align: top;
+			width: 100%;
 
+			@media (min-width: 800px) {
+				width: 70%;
+			}
+
+			display: grid;
+			padding-right: 10px;
+			align-content: space-between;
 			.tags {
-				position: absolute;
-				right: 20px;
-				bottom: 20px;
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: flex-end;
+				margin-top: 10px;
 			}
 		}
 	}
