@@ -8,7 +8,8 @@ declare global {
 			reason?: string
 		}
 		interface Locals {
-			dbConn: PoolClient
+			dbConn: PoolClient,
+			token: String | null
 		}
 		// interface PageData {}
 		// interface PageState {}
