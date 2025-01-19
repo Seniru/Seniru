@@ -31,14 +31,14 @@
         </div>
         <img src={logo2} alt="Logo" />
     </section>
-    <a href="" target="_blank">
+    <a href="https://www.linkedin.com/in/seniru-pasan-51331a286/" target="_blank">
         <i class="fa-brands fa-linkedin"></i>
         LinkedIn
     </a>
     |
-    <a href="" target="_blank">
+    <a href="https://www.instagram.com/senirupasan/" target="_blank">
         <i class="fa-brands fa-instagram"></i>
-        @seniru95
+        @senirupasan
     </a>
     |
     <a href="mailto:senirupasan@gmail.com" target="_blank">

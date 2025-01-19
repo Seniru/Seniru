@@ -25,9 +25,9 @@ export const POST: RequestHandler = async (reqEvt: RequestEvent) => {
     )
 
     const handler: BlogPostHandler = new BlogPostHandler(dbConn)
-    let blogPost = await handler.createBlogPost(body.title, body.content)
+    let id = await handler.createBlogPost(body.title, body.content)
 
-    if (blogPost) return json({ mesesage: ReasonPhrases.CREATED })
+    if (id) return json({ message: { id } })
     error(StatusCodes.INTERNAL_SERVER_ERROR, { message: ReasonPhrases.INTERNAL_SERVER_ERROR })
 }
 
@@ -37,5 +37,5 @@ export const GET: RequestHandler = async (reqEvt: RequestEvent) => {
 
     const handler: BlogPostHandler = new BlogPostHandler(dbConn)
     let blogPosts = await handler.getBlogPosts()
-    return json(blogPosts)
+    return json(blogPosts.toReversed())
 }

@@ -34,7 +34,7 @@
         margin: 10px;
         display: grid;
         grid-template-columns: 10px auto 100px;
-        gap: 15px;
+        gap: 25px;
         align-items: center;
 
         .date-information {
