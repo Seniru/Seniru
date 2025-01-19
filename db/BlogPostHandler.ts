@@ -18,6 +18,28 @@ class BlogPostHandler {
 		return false
 	}
 
+	async getBlogPosts(): Promise<BlogPost[]> {
+		let res = await this.client.query("SELECT * FROM BlogPost")
+		return res.rows.map(blog => {
+			let {
+				id,
+				title,
+				content,
+				publisheddate: publishedDate,
+				lasteditteddate: lastEdittedDate
+			}: {
+				id: number
+				title: string
+				content: string
+				publisheddate: Date
+				lasteditteddate: Date | undefined
+			} = blog
+
+			let blogPost: BlogPost = { id, title, content, publishedDate, lastEdittedDate }
+			return blogPost
+		})
+	}
+
 	async getBlogPost(blogId: number): Promise<BlogPost | null> {
 		let res = await this.client.query('SELECT * FROM BlogPost WHERE id = $1', [blogId])
 		if (res.rowCount == 0) return null

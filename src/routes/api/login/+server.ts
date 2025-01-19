@@ -13,6 +13,9 @@ export const POST: RequestHandler = async (reqEvt: RequestEvent) => {
 	createError(!body.password, StatusCodes.BAD_REQUEST, "Request must include the password")
 	createError(body.password !== process.env.PASSWORD, StatusCodes.UNAUTHORIZED, "Invalid password")
 	
-	let token = jwt.sign("priviledged_user", process.env.JWT_SECRET || "jwtsecret")
+	let token = jwt.sign(
+		process.env.JWT_SIGNED_MESSAGE || "signed_message", process.env.JWT_SECRET || "jwt_secret"
+	)
+
 	return json({ token })
 }

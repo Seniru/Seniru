@@ -9,7 +9,8 @@ declare global {
 		}
 		interface Locals {
 			dbConn: PoolClient,
-			token: String | null
+			token: String | null,
+			priviledged: Boolean
 		}
 		// interface PageData {}
 		// interface PageState {}
