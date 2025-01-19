@@ -2,7 +2,7 @@
 	Common component styles
 */
 
-@use '../utils/variables.scss' as v;
+@use "../utils/variables.scss" as v;
 
 h1,
 h2,
@@ -10,7 +10,7 @@ h3,
 h4,
 h5,
 h6 {
-	color: v.$text-color-secondary;
+    color: v.$text-color-secondary;
 }
 
 /* links */
@@ -18,56 +18,56 @@ a:link,
 a:visited,
 a:active,
 a:hover {
-	color: v.$text-color-secondary;
-	text-decoration: none;
+    color: v.$text-color-secondary;
+    text-decoration: none;
 }
 
 a:hover {
-	text-decoration: underline;
+    text-decoration: underline;
 }
 
 a:active {
-	text-decoration: underline;
-	color: v.$tertiary-color;
+    text-decoration: underline;
+    color: v.$tertiary-color;
 }
 
 /* button */
 button,
-input[type='submit'] {
-	background-color: v.$primary-color;
-	color: v.$text-color-primary;
-	border: none;
-	padding: 8px;
-	font-weight: bold;
-	border-radius: 5px;
-	cursor: pointer;
+input[type="submit"] {
+    background-color: v.$primary-color;
+    color: v.$text-color-primary;
+    border: none;
+    padding: 8px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 button:hover,
-input[type='submit']:hover {
-	color: rgba(v.$text-color-primary, 0.8);
+input[type="submit"]:hover {
+    color: rgba(v.$text-color-primary, 0.8);
 }
 
 button:active,
-input[type='submit']:active {
-	background-color: rgba(v.$primary-color, 0.8);
-	color: rgba(v.$text-color-primary, 0.6);
+input[type="submit"]:active {
+    background-color: rgba(v.$primary-color, 0.8);
+    color: rgba(v.$text-color-primary, 0.6);
 }
 
 /* input */
 input {
-	border: none;
-	padding: 6px;
-	outline: 0;
-	border-radius: 3px;
+    border: none;
+    padding: 6px;
+    outline: 0;
+    border-radius: 3px;
 }
 
 /* container */
 .container {
-	background-color: v.$primary-color;
-	padding: 25px;
+    background-color: v.$primary-color;
+    padding: 25px;
 }
 
 .important {
-	color: v.$text-color-secondary;
+    color: v.$text-color-secondary;
 }
