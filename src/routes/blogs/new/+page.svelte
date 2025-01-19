@@ -8,7 +8,7 @@
     let content = ""
 
     onMount(() => {
-        if (!$page.data.privileged) goto("/")
+        if (!$page.data.priviledged) goto("/")
     })
 
     const handleSubmit = async (event: SubmitEvent) => {

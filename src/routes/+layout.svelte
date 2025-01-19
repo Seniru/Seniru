@@ -19,6 +19,18 @@
     />
 </svelte:head>
 
-<Header />
-<slot></slot>
-<Footer />
+<div class="app">
+    <main>
+        <Header />
+        <slot></slot>
+    </main>
+    <Footer />
+</div>
+
+<style lang="scss">
+    .app {
+        display: grid;
+        min-height: 100vh;
+        align-content: space-between;
+    }
+</style>
