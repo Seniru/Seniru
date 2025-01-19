@@ -10,7 +10,7 @@
     <Navigation>
         <NavigationItem href="./" text="About" />
         <NavigationItem href="./dev" text="Dev" />
-        <NavigationItem href="./" text="Blog" />
+        <NavigationItem href="./blogs" text="Blog" />
     </Navigation>
 </header>
 

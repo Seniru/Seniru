@@ -4,15 +4,15 @@
         <br />
         <ul>
             <li>
-                <a href="" target="_blank">
+                <a href="https://www.linkedin.com/in/seniru-pasan-51331a286/" target="_blank">
                     <i class="fa-brands fa-linkedin"></i>
                     LinkedIn
                 </a>
             </li>
             <li>
-                <a href="" target="_blank">
+                <a href="https://www.instagram.com/senirupasan/" target="_blank">
                     <i class="fa-brands fa-instagram"></i>
-                    @seniru95
+                    @senirupasan
                 </a>
             </li>
             <li>
