@@ -1,5 +1,6 @@
 export const load = async ({ locals }) => {
     return {
-        token: locals.token
+        token: locals.token,
+        priviledged: locals.priviledged
     }
 }

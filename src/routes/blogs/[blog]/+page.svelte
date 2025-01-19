@@ -1,7 +1,9 @@
 <script lang="ts">
     import { onMount } from "svelte"
-    import BlogPost from "../../../components/BlogPost.svelte"
     import { marked } from "marked"
+    import { page } from "$app/stores"
+
+    import BlogPost from "../../../components/BlogPost.svelte"
 
     export let data: { blog: BlogPost }
     let blog = null
@@ -18,6 +20,14 @@
             pageViews = result.count
         }
     })
+
+    const deleteBlog = async () => {
+        let response = await fetch(`/api/blogs/${blog.id}`, {
+            method: "DELETE"
+        })
+        if (response.ok) window.location.href = "/blogs"
+    }
+
 </script>
 
 {#if !blog}
@@ -58,6 +68,10 @@
 
 <br />
 <br />
+
+{#if $page.data.priviledged}
+    <button on:click={deleteBlog}>Delete</button>
+{/if}
 
 <style lang="scss">
     @use "../../../utils/variables.scss" as v;
