@@ -8,9 +8,9 @@
     <img src={logo} class="logo" alt="Logo" width="100px" height="50px" />
 
     <Navigation>
-        <NavigationItem href="./" text="About" />
-        <NavigationItem href="./dev" text="Dev" />
-        <NavigationItem href="./blogs" text="Blog" />
+        <NavigationItem href="/" text="About" />
+        <NavigationItem href="/dev" text="Dev" />
+        <NavigationItem href="/blogs" text="Blog" />
     </Navigation>
 </header>
 

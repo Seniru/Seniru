@@ -18,9 +18,9 @@
             body: JSON.stringify({ title, content })
         })
         let result = await response.json()
-
         if (response.ok) {
-            window.location.reload()
+            let id = result.message.id
+            window.location.href = `/blogs/${id}`
         } else {
             alert(result || response.statusText)
         }
