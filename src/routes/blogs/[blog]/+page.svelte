@@ -19,7 +19,6 @@
         content = blog.content
     }
 
-
     onMount(async () => {
         let response = await fetch(`https://api.counterapi.dev/v1/seniru/blog-${blog.id}/up`)
         if (response.ok) {
@@ -48,7 +47,6 @@
             alert(result.message || response.statusText)
         }
     }
-
 </script>
 
 {#if !blog}
@@ -104,9 +102,7 @@
         <textarea name="body" cols={100} rows={10} bind:value={content} contenteditable />
         <br />
         <input type="submit" value="Submit" />
-        <button type="button" on:click={() => editting = false}>
-            Cancel
-        </button>
+        <button type="button" on:click={() => (editting = false)}> Cancel </button>
     </form>
 
     <br />
@@ -125,11 +121,10 @@
 
 {#if $page.data.priviledged && !editting}
     <div class="priviledged-actions">
-        <button on:click={() => editting = true}>Edit</button>
+        <button on:click={() => (editting = true)}>Edit</button>
         <button style="background-color: red;" on:click={deleteBlog}>Delete</button>
     </div>
 {/if}
-
 
 <style lang="scss">
     @use "../../../utils/variables.scss" as v;
@@ -147,5 +142,4 @@
         display: flex;
         justify-content: space-between;
     }
-
 </style>

@@ -9,12 +9,12 @@ class BlogPostHandler {
         this.client = client
     }
 
-    async createBlogPost(title: string, content: string): Promise<Number|null> {
+    async createBlogPost(title: string, content: string): Promise<Number | null> {
         let res = await this.client.query(
             "INSERT INTO BlogPost (title, content, publishedDate) VALUES ($1, $2, NOW()) RETURNING id",
             [title, content]
         )
-        
+
         if (res) return res.rows[0].id
         return null
     }
