@@ -41,6 +41,13 @@
         "description": "Nobles' Quest 2022 Transformice event. The princess and the treasury are in danger under the hands of evil forces. Travel back to the ancient medieval times to gather resources, craft items and get stronger, then fight off the monsters!"
     },
     {
+        "name": "bfasm",
+        "tags": ["assembly", "cli"],
+        "image": "https://media.licdn.com/dms/image/v2/D562DAQGnPpO-8zxujA/profile-treasury-image-shrink_1920_1920/profile-treasury-image-shrink_1920_1920/0/1737380463652?e=1737986400&v=beta&t=59S2XqFZ3ienJSHUAJo79-z1EVGd9KvS5eiA9C9_Vxc",
+        "link": "https://github.com/Seniru/bfasm",
+        "description": "Brainfuck interpreter and debugger written in Assembly"
+    },
+    {
         "name": "Gamehub",
         "tags": ["web", "javascript"],
         "image": "gamehub.jpeg",
