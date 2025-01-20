@@ -23,8 +23,10 @@ export const GET: RequestHandler = async (req: RequestEvent) => {
 
 export const PATCH: RequestHandler = async (req: RequestEvent) => {
     const { locals, params, request } = req
-    const { dbConn } = locals
+    const { dbConn, priviledged } = locals
     let body = await request.json()
+
+    createError(!priviledged, StatusCodes.UNAUTHORIZED, "You need to log in")
 
     createError(
         !body.title || !body.content,
@@ -53,7 +55,9 @@ export const PATCH: RequestHandler = async (req: RequestEvent) => {
 
 export const DELETE: RequestHandler = async (req: RequestEvent) => {
     const { locals, params } = req
-    const { dbConn } = locals
+    const { dbConn, priviledged } = locals
+
+    createError(!priviledged, StatusCodes.UNAUTHORIZED, "You need to log in")
 
     let blogId: number = Number(params.blog)
     createError(isNaN(blogId), StatusCodes.BAD_REQUEST, "Invalid type for Blog id")
