@@ -1,0 +1,2 @@
+ALTER TABLE BlogPost
+ALTER COLUMN content TYPE TEXT;
