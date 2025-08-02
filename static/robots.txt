@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://seniru.vercel.app/sitemap.xml

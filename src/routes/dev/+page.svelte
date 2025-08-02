@@ -4,7 +4,16 @@
 
     import projects from "./projects.json"
 
-    let allTags = ["python", "web", "javascript", "lua", "transformice", "docker", "assembly", "cli"]
+    let allTags = [
+        "python",
+        "web",
+        "javascript",
+        "lua",
+        "transformice",
+        "docker",
+        "assembly",
+        "cli"
+    ]
     let selectedProjectTags = allTags
 </script>
 

@@ -49,6 +49,45 @@
     }
 </script>
 
+<svelte:head>
+    {#if blog}
+        <title>{blog.title} - Seniru Pasan</title>
+        <meta name="description" content={blog.content.slice(0, 160).replace(/[\r\n]+/g, " ")} />
+        <meta name="author" content="Seniru Pasan" />
+        <meta property="og:title" content="{blog.title} - Seniru Pasan" />
+        <meta
+            property="og:description"
+            content={blog.content.slice(0, 160).replace(/[\r\n]+/g, " ")}
+        />
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content={"https://seniru.vercel.app/blogs/" + blog.id} />
+        <meta property="og:image" content="https://seniru.vercel.app/favicon.svg" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="{blog.title} - Seniru Pasan" />
+        <meta
+            name="twitter:description"
+            content={blog.content.slice(0, 160).replace(/[\r\n]+/g, " ")}
+        />
+        <meta name="twitter:image" content="https://seniru.vercel.app/favicon.svg" />
+        <script type="application/ld+json">
+            {JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "BlogPosting",
+                "headline": blog.title,
+                "author": {
+                    "@type": "Person",
+                    "name": "Seniru Pasan"
+                },
+                "datePublished": blog.publishedDate,
+                "dateModified": blog.lastEdittedDate,
+                "image": "https://seniru.vercel.app/favicon.svg",
+                "url": "https://seniru.vercel.app/blogs/" + blog.id,
+                "description": blog.content.slice(0, 160).replace(/[\r\n]+/g, " ")
+            })}
+        </script>
+    {/if}
+</svelte:head>
+
 {#if !blog}
     <h2>404</h2>
     Not found
