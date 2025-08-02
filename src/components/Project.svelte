@@ -44,10 +44,12 @@
 
         .image-container {
             width: 100%;
+            max-height: 250px;
             margin-bottom: 0;
 
             @media (min-width: 800px) {
                 width: 30%;
+                margin-right: 30px;
             }
 
             img {

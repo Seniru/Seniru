@@ -16,7 +16,6 @@
     $: totalSelected = Object.keys(selected).filter((tag) => selected[tag]).length
 
     const openOptions = (evt: MouseEvent) => {
-        console.log("hi")
         isOpened = !isOpened
     }
 

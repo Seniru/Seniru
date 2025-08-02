@@ -7,12 +7,16 @@
     let allTags = [
         "python",
         "web",
+        "mobile",
         "javascript",
+        "kotlin",
         "lua",
         "transformice",
         "docker",
         "assembly",
-        "cli"
+        "cli",
+        "android",
+        "mern"
     ]
     let selectedProjectTags = allTags
 </script>

@@ -6,6 +6,27 @@
         "description": "An asynchronous and event-based AT terminal implementation using asyncio and serial."
     },
     {
+        "name": "DefendX Online Clothing Store",
+        "tags": ["web", "javascript", "mern"],
+        "image": "defendxstore.jpg",
+        "link": "https://github.com/Seniru/defendxstore",
+        "description": "A complete e-commerce solution for DefendX clothing store. The platform includes all essential features expected from a modern clothing store, such as product management, customer accounts, and order processing."
+    },
+    {
+        "name": "Cliniqon Biotech Tenders website",
+        "tags": ["web", "javascript", "mern", "docker"],
+        "image": "cbiotech.png",
+        "link": "https://github.com/Seniru/tenders-cbiotech",
+        "description": "Tender management application for Cliniqon Biotech"
+    },
+    {
+        "name": "Walley",
+        "tags": ["mobile", "android", "kotlin"],
+        "image": "walley.png",
+        "link": "https://github.com/Seniru/walley",
+        "description": "Walley is a Finance tracker mobile application developed for Android platforms."
+    },
+    {
         "name": "Calculator",
         "tags": ["web", "javascript"],
         "image": "https://github.com/Seniru/Calculator/assets/34127015/6a7df1db-31f9-470f-976c-5e180d2dab4c",
@@ -43,7 +64,7 @@
     {
         "name": "bfasm",
         "tags": ["assembly", "cli"],
-        "image": "https://media.licdn.com/dms/image/v2/D562DAQGnPpO-8zxujA/profile-treasury-image-shrink_1920_1920/profile-treasury-image-shrink_1920_1920/0/1737380463652?e=1737986400&v=beta&t=59S2XqFZ3ienJSHUAJo79-z1EVGd9KvS5eiA9C9_Vxc",
+        "image": "bfasm.jpeg",
         "link": "https://github.com/Seniru/bfasm",
         "description": "Brainfuck interpreter and debugger written in Assembly"
     },
