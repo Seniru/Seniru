@@ -1,7 +1,9 @@
 <script lang="ts">
-    import { onMount } from "svelte"
+    import { afterUpdate, onMount } from "svelte"
     import { marked } from "marked"
     import { page } from "$app/stores"
+    import hljs from "highlight.js"
+    import "highlight.js/styles/atom-one-dark.css"
 
     import BlogPost from "../../../components/BlogPost.svelte"
 
@@ -25,6 +27,12 @@
             let result = await response.json()
             pageViews = result.count
         }
+    })
+
+    afterUpdate(() => {
+        document.querySelectorAll("pre code").forEach((block) => {
+            hljs.highlightElement(block as HTMLElement)
+        })
     })
 
     const deleteBlog = async () => {
