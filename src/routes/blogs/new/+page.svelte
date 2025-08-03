@@ -1,14 +1,22 @@
 <script lang="ts">
     import { goto } from "$app/navigation"
     import { page } from "$app/stores"
-    import { onMount } from "svelte"
+    import { afterUpdate, onMount } from "svelte"
     import { marked } from "marked"
+    import hljs from "highlight.js"
+    import "highlight.js/styles/atom-one-dark.css"
 
     let title = ""
     let content = ""
 
     onMount(() => {
         if (!$page.data.priviledged) goto("/")
+    })
+
+    afterUpdate(() => {
+        document.querySelectorAll("pre code").forEach((block) => {
+            hljs.highlightElement(block as HTMLElement)
+        })
     })
 
     const handleSubmit = async (event: SubmitEvent) => {
