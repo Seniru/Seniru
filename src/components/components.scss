@@ -62,6 +62,41 @@ input {
     border-radius: 3px;
 }
 
+/* blockquote */
+blockquote {
+    border-left: 4px solid v.$secondary-color;
+    background-color: v.$primary-color;
+    padding-left: 1em;
+    margin: 1em 0;
+    color: v.$text-color-secondary;
+    font-style: italic;
+}
+
+/* Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1em 0;
+    background-color: v.$primary-color;
+    color: v.$text-color-primary;
+}
+
+th,
+td {
+    padding: 0.75em;
+    border: 1px solid v.$background-color;
+    text-align: left;
+}
+
+th {
+    background-color: v.$secondary-color;
+    color: v.$text-color-primary;
+}
+
+tr:nth-child(even) {
+    background-color: rgba(v.$background-color, 0.5);
+}
+
 /* container */
 .container {
     background-color: v.$primary-color;
