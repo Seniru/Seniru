@@ -6,6 +6,7 @@
     import "highlight.js/styles/atom-one-dark.css"
 
     import BlogPost from "../../../components/BlogPost.svelte"
+    import { parse } from "dotenv"
 
     export let data: { blog: BlogPost }
 
@@ -55,9 +56,26 @@
             alert(result.message || response.statusText)
         }
     }
+
+    const ldJson = JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        headline: blog.title,
+        author: {
+            "@type": "Person",
+            name: "Seniru Pasan"
+        },
+        datePublished: blog.publishedDate,
+        dateModified: blog.lastEdittedDate,
+        image: "https://seniru.vercel.app/favicon.svg",
+        url: "https://seniru.vercel.app/blogs/" + blog.id,
+        description: blog.content.slice(0, 160).replace(/[\r\n]+/g, " ")
+    })
 </script>
 
 <svelte:head>
+    {@html `<script type="application/ld+json">${ldJson}</script>`}
+
     {#if blog}
         <title>{blog.title} - Seniru Pasan</title>
         <meta name="description" content={blog.content.slice(0, 160).replace(/[\r\n]+/g, " ")} />
@@ -77,22 +95,6 @@
             content={blog.content.slice(0, 160).replace(/[\r\n]+/g, " ")}
         />
         <meta name="twitter:image" content="https://seniru.vercel.app/favicon.svg" />
-        <script type="application/ld+json">
-            {
-                "@context": "https://schema.org",
-                "@type": "BlogPosting",
-                "headline": blog.title,
-                "author": {
-                    "@type": "Person",
-                    "name": "Seniru Pasan"
-                },
-                "datePublished": blog.publishedDate,
-                "dateModified": blog.lastEdittedDate,
-                "image": "https://seniru.vercel.app/favicon.svg",
-                "url": "https://seniru.vercel.app/blogs/" + blog.id,
-                "description": blog.content.slice(0, 160).replace(/[\r\n]+/g, " ")
-            }
-        </script>
     {/if}
 </svelte:head>
 
