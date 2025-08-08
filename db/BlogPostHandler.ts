@@ -25,18 +25,16 @@ class BlogPostHandler {
             let {
                 id,
                 title,
-                content,
                 publisheddate: publishedDate,
                 lasteditteddate: lastEdittedDate
             }: {
                 id: number
                 title: string
-                content: string
                 publisheddate: Date
                 lasteditteddate: Date | undefined
             } = blog
 
-            let blogPost: BlogPost = { id, title, content, publishedDate, lastEdittedDate }
+            let blogPost: BlogPost = { id, title, publishedDate, lastEdittedDate }
             return blogPost
         })
     }

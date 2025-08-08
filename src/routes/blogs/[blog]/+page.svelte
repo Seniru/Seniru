@@ -78,7 +78,7 @@
         />
         <meta name="twitter:image" content="https://seniru.vercel.app/favicon.svg" />
         <script type="application/ld+json">
-            {JSON.stringify({
+            {
                 "@context": "https://schema.org",
                 "@type": "BlogPosting",
                 "headline": blog.title,
@@ -91,7 +91,7 @@
                 "image": "https://seniru.vercel.app/favicon.svg",
                 "url": "https://seniru.vercel.app/blogs/" + blog.id,
                 "description": blog.content.slice(0, 160).replace(/[\r\n]+/g, " ")
-            })}
+            }
         </script>
     {/if}
 </svelte:head>
