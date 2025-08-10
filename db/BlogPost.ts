@@ -9,5 +9,6 @@ export interface BlogPost {
     readonly content?: string
     readonly publishedDate: Date
     readonly lastEdittedDate?: Date
+    readonly replyCount?: number
     readonly replies?: BlogPostReply[]
 }

@@ -20,21 +20,29 @@ class BlogPostHandler {
     }
 
     async getBlogPosts(): Promise<BlogPost[]> {
-        let res = await this.client.query("SELECT * FROM BlogPost")
+        let res = await this.client.query(`SELECT p.*, COUNT(r.id)::INT AS replyCount
+            FROM BlogPost p
+            LEFT JOIN BlogPostReply r 
+            ON p.id = r.blogpostId
+            GROUP BY p.id;
+        `)
+        console.log(res.rows)
         return res.rows.map((blog) => {
             let {
                 id,
                 title,
                 publisheddate: publishedDate,
-                lasteditteddate: lastEdittedDate
+                lasteditteddate: lastEdittedDate,
+                replycount: replyCount
             }: {
                 id: number
                 title: string
                 publisheddate: Date
                 lasteditteddate: Date | undefined
+                replycount: number
             } = blog
 
-            let blogPost: BlogPost = { id, title, publishedDate, lastEdittedDate }
+            let blogPost: BlogPost = { id, title, publishedDate, lastEdittedDate, replyCount }
             return blogPost
         })
     }

@@ -20,5 +20,6 @@
         title={blogPost.title}
         publishedDate={blogPost.publishedDate}
         lastEdittedDate={blogPost.lastEdittedDate}
+        replyCount={blogPost.replyCount}
     />
 {/each}
