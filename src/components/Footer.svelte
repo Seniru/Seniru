@@ -29,36 +29,13 @@
             </li>
         </ul>
     </div>
-    <div>
-        Subscribe to the newsletter
-        <form>
-            <input type="email" />
-            <input type="submit" value="Subscribe!" />
-        </form>
-    </div>
     <div>Copyright &copy; 2024 Seniru</div>
 </footer>
 
 <style lang="scss">
     footer {
         margin-top: 25px;
-
-        div {
-            width: 32%;
-            display: inline-block;
-            vertical-align: top;
-        }
-
-        div:nth-child(1) {
-            text-align: left;
-        }
-
-        div:nth-child(2) {
-            text-align: center;
-        }
-
-        div:nth-child(3) {
-            text-align: right;
-        }
+        display: flex;
+        justify-content: space-between;
     }
 </style>
