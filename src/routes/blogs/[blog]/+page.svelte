@@ -23,7 +23,6 @@
         blog = data.blog.result
         title = blog.title
         content = blog.content
-        console.log(blog.replies)
     }
 
     onMount(async () => {
