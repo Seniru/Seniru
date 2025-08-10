@@ -129,8 +129,9 @@
                 </div>
             {/if}
         </div>
-
-        {@html marked.parse(blog.content)}
+        <div class="blog-content">
+            {@html marked.parse(blog.content)}
+        </div>
     </div>
 {/if}
 
@@ -160,7 +161,7 @@
     <br />
 
     {#if content.length > 0}
-        <div class="container">
+        <div class="container blog-content">
             {@html marked.parse(content)}
         </div>
     {:else}
@@ -190,5 +191,11 @@
     .priviledged-actions {
         display: flex;
         justify-content: space-between;
+    }
+
+    .blog-content :global(img) {
+        display: block;
+        max-width: 100%;
+        margin: auto;
     }
 </style>
