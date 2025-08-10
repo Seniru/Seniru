@@ -47,3 +47,25 @@ export const POST: RequestHandler = async (reqEvt: RequestEvent) => {
         error(StatusCodes.INTERNAL_SERVER_ERROR, { message: ReasonPhrases.INTERNAL_SERVER_ERROR })
     }
 }
+
+export const DELETE: RequestHandler = async (reqEvt: RequestEvent) => {
+    const { locals, request, params } = reqEvt
+    let body = await request.json()
+    const { dbConn, priviledged } = locals
+    let blogId: number = Number(params.blog)
+
+    createError(!priviledged, StatusCodes.UNAUTHORIZED, "You need to log in")
+
+    createError(!body.content, StatusCodes.BAD_REQUEST, "Missing content in request")
+
+    const handler: BlogPostHandler = new BlogPostHandler(dbConn)
+    try {
+        await handler.deleteReply(blogId, body.content)
+        return json({
+            message: ReasonPhrases.OK
+        })
+    } catch (err) {
+        console.error(err)
+        error(StatusCodes.INTERNAL_SERVER_ERROR, { message: ReasonPhrases.INTERNAL_SERVER_ERROR })
+    }
+}

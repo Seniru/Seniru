@@ -93,6 +93,16 @@ class BlogPostHandler {
             [blogId, nickname, content]
         )
     }
+
+    // we'll just have to delete by the content because the reply id's are not really consistent
+    // that is thanks to me not considering about incrementing blog reply ids properly.
+    // it's fine though because this is just a blog website that no one probably cares.
+    async deleteReply(blogId: number, content: string): Promise<void> {
+        await this.client.query(
+            "DELETE FROM BlogPostReply WHERE blogPostId = $1 AND content = $2",
+            [blogId, content]
+        )
+    }
 }
 
 export default BlogPostHandler

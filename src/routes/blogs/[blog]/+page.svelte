@@ -156,7 +156,11 @@
         <div>No replies yet</div>
     {:else}
         {#each blog.replies as reply}
-            <BlogPostReply nickname={reply.nickname} content={reply.replyContent} />
+            <BlogPostReply
+                nickname={reply.nickname}
+                content={reply.replyContent}
+                blogId={blog.id}
+            />
         {/each}
     {/if}
     <br />

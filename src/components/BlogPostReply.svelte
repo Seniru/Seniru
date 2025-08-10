@@ -1,6 +1,22 @@
 <script lang="ts">
+    import { page } from "$app/stores"
+
+    export let blogId: number
     export let nickname: string
     export let content: string
+
+    const deleteReply = async () => {
+        let response = await fetch(`/api/blogs/${blogId}/reply`, {
+            method: "DELETE",
+            body: JSON.stringify({ content })
+        })
+        let result = await response.json()
+        if (response.ok) {
+            window.location.reload()
+        } else {
+            alert(result.message || response.statusText)
+        }
+    }
 </script>
 
 <div class="container reply-container">
@@ -14,6 +30,9 @@
         {/if}
     </div>
     <p>{content}</p>
+    {#if $page.data.priviledged}
+        <button style="background-color: red;" on:click={deleteReply}>Delete</button>
+    {/if}
 </div>
 
 <style lang="scss">
