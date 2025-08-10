@@ -7,6 +7,7 @@
 
     import BlogPost from "../../../components/BlogPost.svelte"
     import { parse } from "dotenv"
+    import BlogPostReply from "../../../components/BlogPostReply.svelte"
 
     export let data: { blog: BlogPost }
 
@@ -15,6 +16,8 @@
     let editting = false
     let title = ""
     let content = ""
+    let nickname = ""
+    let replyContent = ""
 
     if (data) {
         blog = data.blog.result
@@ -54,6 +57,20 @@
             window.location.reload()
         } else {
             alert(result.message || response.statusText)
+        }
+    }
+
+    const createReply = async (event: SubmitEvent) => {
+        event.preventDefault()
+        let response = await fetch(`/api/blogs/${blog.id}/reply`, {
+            method: "POST",
+            body: JSON.stringify({ nickname, content: replyContent, blogId: blog.id })
+        })
+        let result = await response.json()
+        if (response.ok) {
+            window.location.reload()
+        } else {
+            alert(result.reason || response.statusText)
         }
     }
 
@@ -133,6 +150,40 @@
             {@html marked.parse(blog.content)}
         </div>
     </div>
+    <h1>Replies</h1>
+    {#if !blog.replies || blog.replies.length === 0}
+        <div>No replies yet</div>
+    {:else}
+        {#each blog.replies as reply}
+            <BlogPostReply
+                nickname={reply.nickname}
+                content={reply.replyContent}
+                blogId={blog.id}
+            />
+        {/each}
+    {/if}
+    <br />
+    <form on:submit={createReply} class="">
+        <h3>Create a reply</h3>
+        <label for="nickname">Nickname</label>
+        <br />
+        <input type="text" name="nickname" bind:value={nickname} maxlength={20} minlength={4} />
+        <br />
+        <br />
+        <label for="content">Reply</label>
+        <br />
+        <textarea
+            name="content"
+            cols={40}
+            rows={3}
+            bind:value={replyContent}
+            maxlength={250}
+            minlength={4}
+            contenteditable
+        />
+        <br />
+        <input type="submit" value="Send" />
+    </form>
 {/if}
 
 <br />
