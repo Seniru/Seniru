@@ -24,7 +24,7 @@ I'm Seniru - a hobbyist coder and a cat lover :3
 
 <hr>
 
-<img src="https://github-profile-trophy.vercel.app/?username=Seniru&theme=onedark">
+<img src="https://trophygh.kolioaris.xyz?username=Seniru&theme=onedark">
 
 **Contact me**
 
