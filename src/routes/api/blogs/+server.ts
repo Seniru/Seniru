@@ -37,5 +37,5 @@ export const GET: RequestHandler = async (reqEvt: RequestEvent) => {
 
     const handler: BlogPostHandler = new BlogPostHandler(dbConn)
     let blogPosts = await handler.getBlogPosts()
-    return json(blogPosts.toReversed())
+    return json(blogPosts)
 }
