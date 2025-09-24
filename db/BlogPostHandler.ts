@@ -24,9 +24,9 @@ class BlogPostHandler {
             FROM BlogPost p
             LEFT JOIN BlogPostReply r 
             ON p.id = r.blogpostId
-            GROUP BY p.id;
+            GROUP BY p.id
+            ORDER BY GREATEST(p.lastEdittedDate, p.publishedDate) DESC;
         `)
-        console.log(res.rows)
         return res.rows.map((blog) => {
             let {
                 id,
