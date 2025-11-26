@@ -1,15 +1,13 @@
 <script lang="ts">
-    import { onMount } from "svelte"
     import BlogPost from "../../components/BlogPost.svelte"
 
     let blogPosts: BlogPost[] = []
+    export let data: {
+        blogPosts: BlogPost[]
+    }
 
-    onMount(async () => {
-        let response = await fetch("/api/blogs")
-        if (response.ok) {
-            blogPosts = await response.json()
-        }
-    })
+    if (data) blogPosts = data.blogPosts
+    export const ssr = true
 </script>
 
 <h1>Blogs</h1>
